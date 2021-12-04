@@ -1,5 +1,5 @@
-days = day1 day2
-dayso = build/day1.o build/day2.o
+days = day1 day2 day3
+dayso = build/day1.o build/day2.o build/day3.o
 
 AdventOfCode: prebuild $(days) main
 	cc $(dayso) build/main.o -o build/AdventOfCode
@@ -15,3 +15,6 @@ day1: prebuild
 
 day2: prebuild
 	cc -c 2021/day2/day2.c -o build/day2.o
+
+day3: prebuild
+	cc -c 2021/day3/day3.c -o build/day3.o
